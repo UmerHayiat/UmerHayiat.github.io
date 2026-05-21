@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-[#0A0A0B]">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>seoxia · elite cold email infrastructure</title>
+  <meta name="description" content="ai-powered cold email infrastructure for b2b agencies. real-time prospect research, hyper-personalized emails, zero spam folder.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="seoxia · elite cold email infrastructure">
+  <meta property="og:description" content="ai-powered cold email infrastructure for b2b agencies.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Lucide icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'ink':    '#0A0A0B',
+            'ink-2':  '#141416',
+            'ink-3':  '#1F1F22',
+            'edge':   '#26262A',
+            'mute':   '#6B6B72',
+            'fog':    '#A6A6AE',
+            'paper':  '#E6E6EA',
+            'amber':  '#E8A04E',
+            'amber-dim': '#A8723A',
+            'emerald': '#3FCF8E',
+            'rose':   '#E5484D',
+          },
+          fontFamily: {
+            'sans': ['Inter', 'system-ui', 'sans-serif'],
+            'mono': ['JetBrains Mono', 'ui-monospace', 'monospace'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    ::selection { background: rgba(232,160,78,0.3); color: #E6E6EA; }
+    .ambient {
+      background:
+        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(232,160,78,0.15), transparent),
+        radial-gradient(ellipse 60% 50% at 80% 50%, rgba(232,160,78,0.06), transparent);
+    }
+    pre, code { font-family: 'JetBrains Mono', monospace; }
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+
+<body class="text-paper antialiased overflow-x-hidden">
+
+  <!-- ===== NAV ===== -->
+  <nav class="border-b border-edge/40 bg-ink/80 backdrop-blur-md sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#top" class="flex items-center gap-2">
+        <span class="text-xs uppercase tracking-widest text-mute font-mono">seoxia</span>
+      </a>
+      <div class="flex items-center gap-6 text-sm">
+        <a href="#how" class="text-fog hover:text-paper transition-colors hidden sm:inline">how it works</a>
+        <a href="#offer" class="text-fog hover:text-paper transition-colors hidden sm:inline">offer</a>
+        <a href="mailto:hello@seoxia.com"
+           class="px-3 py-1.5 rounded bg-amber/10 border border-amber/30 text-amber
+                  text-xs font-mono hover:bg-amber/20 transition-colors">
+          claim a pilot →
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="top" class="ambient pt-20 pb-24 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full
+                  bg-ink-2 border border-edge mb-8">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald animate-pulse"></span>
+        <span class="text-xs font-mono text-fog">
+          shipping production sends · domain reputation: clean
+        </span>
+      </div>
+
+      <h1 class="text-5xl md:text-7xl font-bold leading-[1.05] tracking-tight mb-6">
+        cold email,<br>
+        <span class="text-amber">finally personalized.</span>
+      </h1>
+
+      <p class="text-xl md:text-2xl text-fog leading-relaxed max-w-3xl mx-auto mb-10">
+        i build custom ai cold email infrastructure for b2b agencies.
+        real-time prospect research, hyper-personalized emails,
+        <span class="text-paper">zero spam folder</span>.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+        <a href="#offer"
+           class="w-full sm:w-auto px-6 py-3 rounded bg-amber text-ink
+                  font-semibold hover:bg-amber/90 transition-colors">
+          see the offer →
+        </a>
+        <a href="#demo"
+           class="w-full sm:w-auto px-6 py-3 rounded
+                  bg-ink-2 border border-edge text-paper
+                  font-medium hover:border-amber/40 transition-colors
+                  inline-flex items-center justify-center gap-2">
+          <i data-lucide="play-circle" class="w-4 h-4"></i>
+          watch 90sec demo
+        </a>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 pt-12 border-t border-edge/40">
+        <div class="text-center">
+          <div class="text-2xl font-mono font-bold text-paper">live</div>
+          <div class="text-[10px] uppercase tracking-wider text-mute font-mono mt-1">
+            production sends
+          </div>
+        </div>
+        <div class="text-center">
+          <div class="text-2xl font-mono font-bold text-emerald">0%</div>
+          <div class="text-[10px] uppercase tracking-wider text-mute font-mono mt-1">
+            spam rate
+          </div>
+        </div>
+        <div class="text-center">
+          <div class="text-2xl font-mono font-bold text-amber">pass</div>
+          <div class="text-[10px] uppercase tracking-wider text-mute font-mono mt-1">
+            spf · dkim · dmarc
+          </div>
+        </div>
+        <div class="text-center">
+          <div class="text-2xl font-mono font-bold text-paper">python</div>
+          <div class="text-[10px] uppercase tracking-wider text-mute font-mono mt-1">
+            built from scratch
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== PROBLEM ===== -->
+  <section class="py-20 px-6">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-xs uppercase tracking-widest text-amber font-mono mb-3">
+        the problem
+      </div>
+      <h2 class="text-3xl md:text-4xl font-bold mb-8 leading-tight">
+        agencies sell cold email.<br>
+        agencies don't do cold email.
+      </h2>
+      <p class="text-lg text-fog leading-relaxed mb-6 max-w-3xl">
+        you tell clients to do outbound consistently. then you skip your own outreach
+        because the existing tools force a choice: mail-merge garbage or 40 hours of
+        manual research per week.
+      </p>
+      <p class="text-lg text-fog leading-relaxed mb-6 max-w-3xl">
+        most "ai cold email" tools are <span class="text-paper">lemlist with chatgpt bolted on</span>.
+        they personalize the first sentence and template the rest.
+        prospects see through it in 3 seconds.
+      </p>
+      <p class="text-lg text-paper leading-relaxed max-w-3xl">
+        i built something different.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <section id="how" class="py-20 px-6 bg-ink-2/30 border-y border-edge/40">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-xs uppercase tracking-widest text-amber font-mono mb-3">
+        how it works
+      </div>
+      <h2 class="text-3xl md:text-4xl font-bold mb-12 leading-tight">
+        four daemons.<br>
+        zero copy-paste.
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <div class="bg-ink border border-edge rounded-lg p-6 hover:border-amber/40 transition-colors">
+          <div class="flex items-start gap-3 mb-3">
+            <div class="w-9 h-9 rounded bg-amber/10 border border-amber/30
+                        flex items-center justify-center flex-shrink-0">
+              <i data-lucide="microscope" class="w-4 h-4 text-amber"></i>
+            </div>
+            <h3 class="text-lg font-semibold text-paper">recon</h3>
+          </div>
+          <p class="text-fog text-sm leading-relaxed">
+            playwright scrapes the prospect website with real chrome tls fingerprint.
+            bypasses cloudflare. extracts firm name, services, recent activity, weaknesses.
+          </p>
+        </div>
+
+        <div class="bg-ink border border-edge rounded-lg p-6 hover:border-amber/40 transition-colors">
+          <div class="flex items-start gap-3 mb-3">
+            <div class="w-9 h-9 rounded bg-amber/10 border border-amber/30
+                        flex items-center justify-center flex-shrink-0">
+              <i data-lucide="sparkles" class="w-4 h-4 text-amber"></i>
+            </div>
+            <h3 class="text-lg font-semibold text-paper">analysis</h3>
+          </div>
+          <p class="text-fog text-sm leading-relaxed">
+            llama 3.1 8b on groq finds the single most exploitable revenue leak.
+            trust gap, visibility gap, or positioning gap. severity scored 0.0-1.0.
+          </p>
+        </div>
+
+        <div class="bg-ink border border-edge rounded-lg p-6 hover:border-amber/40 transition-colors">
+          <div class="flex items-start gap-3 mb-3">
+            <div class="w-9 h-9 rounded bg-amber/10 border border-amber/30
+                        flex items-center justify-center flex-shrink-0">
+              <i data-lucide="pen-tool" class="w-4 h-4 text-amber"></i>
+            </div>
+            <h3 class="text-lg font-semibold text-paper">copywriting</h3>
+          </div>
+          <p class="text-fog text-sm leading-relaxed">
+            elite single-pass prompt writes 50-90 words in my voice. evidence quoted
+            verbatim. validator rejects anything with banned phrases, exclamations,
+            or sign-off drift.
+          </p>
+        </div>
+
+        <div class="bg-ink border border-edge rounded-lg p-6 hover:border-amber/40 transition-colors">
+          <div class="flex items-start gap-3 mb-3">
+            <div class="w-9 h-9 rounded bg-amber/10 border border-amber/30
+                        flex items-center justify-center flex-shrink-0">
+              <i data-lucide="send" class="w-4 h-4 text-amber"></i>
+            </div>
+            <h3 class="text-lg font-semibold text-paper">dispatch</h3>
+          </div>
+          <p class="text-fog text-sm leading-relaxed">
+            sends via authenticated smtp with spf · dkim · dmarc all passing.
+            list-unsubscribe one-click header. random inter-send delay.
+            zero spam complaints.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="mt-12 pt-8 border-t border-edge/40">
+        <div class="text-[10px] uppercase tracking-widest text-mute font-mono mb-4 text-center">
+          stack
+        </div>
+        <div class="flex flex-wrap items-center justify-center gap-2 font-mono text-xs">
+          <span class="px-3 py-1 rounded bg-ink-3 border border-edge text-fog">python</span>
+          <span class="px-3 py-1 rounded bg-ink-3 border border-edge text-fog">fastapi</span>
+          <span class="px-3 py-1 rounded bg-ink-3 border border-edge text-fog">sqlite</span>
+          <span class="px-3 py-1 rounded bg-ink-3 border border-edge text-fog">playwright</span>
+          <span class="px-3 py-1 rounded bg-ink-3 border border-edge text-fog">groq</span>
+          <span class="px-3 py-1 rounded bg-ink-3 border border-edge text-fog">llama 3.1</span>
+          <span class="px-3 py-1 rounded bg-ink-3 border border-edge text-fog">htmx</span>
+          <span class="px-3 py-1 rounded bg-ink-3 border border-edge text-fog">tailwind</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== SAMPLE EMAIL ===== -->
+  <section class="py-20 px-6">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-xs uppercase tracking-widest text-amber font-mono mb-3">
+        the output
+      </div>
+      <h2 class="text-3xl md:text-4xl font-bold mb-8 leading-tight">
+        here's what lands<br>in their inbox.
+      </h2>
+
+      <div class="bg-ink-2 border border-edge rounded-lg overflow-hidden">
+        <div class="px-5 py-3 border-b border-edge bg-ink flex items-center gap-3 text-xs font-mono">
+          <span class="text-mute">to:</span>
+          <span class="text-paper">scott@barringer-cpa.com</span>
+        </div>
+        <div class="px-5 py-3 border-b border-edge bg-ink flex items-center gap-3 text-xs font-mono">
+          <span class="text-mute">subject:</span>
+          <span class="text-paper">quick thing about your google maps</span>
+        </div>
+        <div class="px-5 py-6 text-paper text-base leading-relaxed">
+          <p>hey scott — quick thing about your google maps.</p>
+          <br>
+          <p>noticed your firm has only 4 reviews. warren averett up the road
+          shows 215. that's the gap google ranks on, not service quality.</p>
+          <br>
+          <p>worth a 5-min look at the audit?</p>
+          <br>
+          <p class="text-fog text-sm">
+            umer<br>
+            <span class="text-mute">123 main st, austin tx · reply 'stop' to opt out</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-6 grid grid-cols-3 gap-4 text-center">
+        <div class="bg-ink-2 border border-edge rounded p-4">
+          <div class="text-xl font-mono font-bold text-paper">33 words</div>
+          <div class="text-[10px] uppercase tracking-wider text-mute font-mono mt-1">
+            body length
+          </div>
+        </div>
+        <div class="bg-ink-2 border border-edge rounded p-4">
+          <div class="text-xl font-mono font-bold text-amber">verbatim</div>
+          <div class="text-[10px] uppercase tracking-wider text-mute font-mono mt-1">
+            evidence quoted
+          </div>
+        </div>
+        <div class="bg-ink-2 border border-edge rounded p-4">
+          <div class="text-xl font-mono font-bold text-emerald">primary</div>
+          <div class="text-[10px] uppercase tracking-wider text-mute font-mono mt-1">
+            inbox placement
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DEMO SECTION (Loom placeholder — paste link after recording) ===== -->
+  <section id="demo" class="py-20 px-6 bg-ink-2/30 border-y border-edge/40">
+    <div class="max-w-3xl mx-auto text-center">
+      <div class="text-xs uppercase tracking-widest text-amber font-mono mb-3">
+        90-second demo
+      </div>
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 leading-tight">
+        watch the system run.
+      </h2>
+      <p class="text-lg text-fog mb-10 max-w-2xl mx-auto">
+        a quick walkthrough of the dashboard, the recon, the copywriter,
+        and the actual email that landed in a real cpa firm's inbox.
+      </p>
+
+      <!-- LOOM EMBED PLACEHOLDER — replace YOUR_LOOM_ID with the real one -->
+      <div class="bg-ink-2 border border-edge rounded-lg overflow-hidden
+                  aspect-video max-w-3xl mx-auto">
+        <!-- After recording your Loom, replace this iframe src with:
+             https://www.loom.com/embed/YOUR_LOOM_ID -->
+        <div class="flex items-center justify-center h-full">
+          <a href="#" id="loom-link"
+             class="inline-flex items-center gap-3 px-6 py-3 rounded
+                    bg-amber/10 border border-amber/30 text-amber
+                    font-mono text-sm hover:bg-amber/20 transition-colors">
+            <i data-lucide="play-circle" class="w-5 h-5"></i>
+            watch the demo (90 seconds)
+          </a>
+        </div>
+      </div>
+      <p class="mt-4 text-mute text-xs font-mono">
+        loom · no signup required to watch
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== OFFER ===== -->
+  <section id="offer" class="py-24 px-6">
+    <div class="max-w-3xl mx-auto text-center">
+      <div class="text-xs uppercase tracking-widest text-amber font-mono mb-3">
+        the offer
+      </div>
+      <h2 class="text-3xl md:text-5xl font-bold mb-6 leading-tight">
+        $220 flat.<br>
+        money back if zero replies.
+      </h2>
+      <p class="text-lg text-fog leading-relaxed max-w-2xl mx-auto mb-12">
+        i run my engine on your prospect list for 14 days.
+        you get 30 hyper-personalized cold emails,
+        replies forwarded to your inbox, full audit trail.
+      </p>
+
+      <div class="bg-ink-2 border border-amber/40 rounded-lg p-8 text-left max-w-xl mx-auto mb-10">
+        <div class="space-y-4">
+
+          <div class="flex items-start gap-3">
+            <i data-lucide="check" class="w-5 h-5 text-emerald mt-0.5 flex-shrink-0"></i>
+            <div>
+              <div class="text-paper font-semibold">30 hyper-personalized emails</div>
+              <div class="text-fog text-sm">each one researched and written fresh</div>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <i data-lucide="check" class="w-5 h-5 text-emerald mt-0.5 flex-shrink-0"></i>
+            <div>
+              <div class="text-paper font-semibold">delivered over 14 days</div>
+              <div class="text-fog text-sm">paced to protect your domain reputation</div>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <i data-lucide="check" class="w-5 h-5 text-emerald mt-0.5 flex-shrink-0"></i>
+            <div>
+              <div class="text-paper font-semibold">replies routed to your inbox</div>
+              <div class="text-fog text-sm">you close the deals; i deliver the leads</div>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <i data-lucide="check" class="w-5 h-5 text-emerald mt-0.5 flex-shrink-0"></i>
+            <div>
+              <div class="text-paper font-semibold">live in 72 hours from kickoff</div>
+              <div class="text-fog text-sm">no onboarding theatre</div>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3 pt-3 border-t border-edge/40">
+            <i data-lucide="shield" class="w-5 h-5 text-amber mt-0.5 flex-shrink-0"></i>
+            <div>
+              <div class="text-amber font-semibold">money back if zero replies</div>
+              <div class="text-fog text-sm">risk reversed · you only pay if it works</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <a href="mailto:hello@seoxia.com?subject=pilot%20interest&body=hi%20umer%2C%20interested%20in%20the%20%24220%20pilot.%20our%20agency%20is..."
+         class="inline-flex items-center gap-2 px-8 py-4 rounded
+                bg-amber text-ink font-semibold text-lg
+                hover:bg-amber/90 transition-colors">
+        claim a pilot slot →
+      </a>
+
+      <p class="mt-4 text-mute text-xs font-mono">
+        reply with your agency name · i'll send calendly within 30 min
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="py-12 px-6 border-t border-edge/40">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-sm">
+
+      <div>
+        <div class="text-xs uppercase tracking-widest text-mute font-mono mb-1">
+          seoxia
+        </div>
+        <p class="text-fog text-xs">
+          built and run by
+          <a href="https://www.linkedin.com/in/umer-hayiat/" target="_blank"
+             class="text-paper hover:text-amber">umer hayiat</a>
+        </p>
+      </div>
+
+      <div class="flex items-center gap-5 text-xs font-mono text-fog">
+        <a href="https://www.linkedin.com/in/umer-hayiat/" target="_blank"
+           class="hover:text-amber transition-colors">linkedin ↗</a>
+        <a href="https://www.upwork.com/freelancers/~01b0ba0cc677cc7380" target="_blank"
+           class="hover:text-amber transition-colors">upwork ↗</a>
+        <a href="mailto:hello@seoxia.com"
+           class="hover:text-amber transition-colors">email ↗</a>
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.lucide) lucide.createIcons();
+    });
+  </script>
+
+</body>
+</html>
